@@ -1,13 +1,13 @@
 {% set name = "cucopy" %}
-{% set version = "1.0" %}
+{% set version = "1.2.1" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/cucopy-{{ version }}.tar.gz
-  sha256: 3a0b898d0a07267a2194d771e7212fc8aeeb517e436592903a7dd123551fb184
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/cucopy-{{ version }}.tar.gz
+  sha256: 471353e2600f5ab24b45427c7b8bfaa2b009b5bf4af12a484e69eb3f92d98018
 
 build:
   noarch: python
