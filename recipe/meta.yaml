@@ -1,5 +1,6 @@
 {% set name = "cucopy" %}
 {% set version = "1.0" %}
+{% set pyhon_min = "3.8" %}
 
 package:
   name: {{ name|lower }}
