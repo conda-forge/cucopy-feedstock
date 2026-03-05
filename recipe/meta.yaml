@@ -1,5 +1,5 @@
 {% set name = "cucopy" %}
-{% set version = "1.0" %}
+{% set version = "1.2.4" %}
 {% set pyhon_min = "3.8" %}
 
 package:
@@ -8,12 +8,12 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/cucopy-{{ version }}.tar.gz
-  sha256: 3a0b898d0a07267a2194d771e7212fc8aeeb517e436592903a7dd123551fb184
+  sha256: 0ed9e0ed255709d3199a3af604e9c62943e65e335a0a5b9082dccb1ecddc6e82
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
