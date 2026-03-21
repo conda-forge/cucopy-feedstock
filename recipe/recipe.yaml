@@ -1,5 +1,5 @@
 context:
-  version: "1.2.4"
+  version: "1.2.3"
   python_min: "3.9"
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
 - url: https://github.com/FZJ-IEK3-VSA/CuCoPy/archive/refs/tags/v${{ version }}.tar.gz
-  sha256: d5558cd419c8d46bdc958064cb97f963d1ea793866414c025906ec15033512ed
+  sha256: 1e0de21a70100b828120d2d78048721ae289768d4466128786b839b9bf35c78b
 
 build:
   number: 0
