@@ -3,11 +3,11 @@ About cucopy-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/cucopy-feedstock/blob/main/LICENSE.txt)
 
-Home: https://jugit.fz-juelich.de/iek-3/groups/data-and-model-integration/cucopy
+Home: https://github.com/FZJ-IEK3-VSA/CuCoPy
 
 Package license: MIT
 
-Summary: The CuCoPy package provides methods for exchanging currencies and adjusting monetary values for inflation until 1960 on a yearly basis.
+Summary: Module for exchanging monetary values and inflation adjustment.
 
 Current build status
 ====================
