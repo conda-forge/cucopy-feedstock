@@ -1,43 +1,45 @@
-{% set name = "cucopy" %}
-{% set version = "1.2.5" %}
-{% set pyhon_min = "3.8" %}
-
+context:
+  version: "1.2.4"
+  python_min: "3.10"
+  
 package:
-  name: {{ name|lower }}
-  version: {{ version }}
+  name: cucopy
+  version: ${{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/cucopy-{{ version }}.tar.gz
+  url: https://github.com/FZJ-IEK3-VSA/CuCoPy/archive/refs/tags/v${{ version }}.tar.gz
   sha256: 65ef166f838b808fa1128215ccfe6b6c5ba58890dcfad47f2aac179f9517e243
 
 build:
-  noarch: python
-  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 0
+  script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  noarch: python
 
 requirements:
   host:
-    - python {{ python_min }}
-    - setuptools >=61.0
-    - wheel
-    - setuptools-git
-    - pip
+  - python ${{ python_min }}.*
+  - setuptools
+  - pip
   run:
-    - python >={{ python_min }}
-    - pandas
+  - python >=${{ python_min }}
+  - pyyaml >=6.0
+  - sdmx1 >=2.23.1
+  - joblib >=1.3.2
 
-test:
-  imports:
-    - cucopy
-  commands:
-    - pip check
-  requires:
-    - pip
-    - python {{ python_min }}
+tests:
+- script:
+    - pytest -vvv
+  requirements:
+      run:
+        - pytest
+        - python ${{ python_min }}.*
+  files:
+      source:
+        - .
 
 about:
-  home: https://jugit.fz-juelich.de/iek-3/groups/data-and-model-integration/cucopy
-  summary: The CuCoPy package provides methods for exchanging currencies and adjusting monetary values for inflation until 1960 on a yearly basis.
+  homepage: https://github.com/FZJ-IEK3-VSA/CuCoPy
+  summary: Module for exchanging monetary values and inflation adjustment.
   license: MIT
   license_file: LICENSE
 
