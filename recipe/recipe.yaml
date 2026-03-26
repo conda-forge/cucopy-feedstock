@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://github.com/FZJ-IEK3-VSA/CuCoPy/archive/refs/tags/v${{ version }}.tar.gz
-  sha256: 65ef166f838b808fa1128215ccfe6b6c5ba58890dcfad47f2aac179f9517e243
+  sha256: 89907e91ad2fed4de3783a28207c4b19ec11f501306de503be07f2128a7c2179
 
 build:
   number: 0
